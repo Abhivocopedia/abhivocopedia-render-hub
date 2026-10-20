@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#5a0d16">
+  <meta name="description" content="Natyaksha — an animated PDF flipbook brochure.">
+  <title>Natyaksha 2026 | Digital Brochure</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <main class="stage" id="stage" aria-label="Natyaksha digital brochure">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <div class="book-shell" id="bookShell">
+      <div class="book" id="book" aria-label="Interactive flipbook" tabindex="0">
+        <div class="leaf cover-leaf" id="initialCover">
+          <div class="face front cover-face">
+            <img src="cover.jpg" alt="Natyaksha 2026 cover" class="cover-image" draggable="false">
+            <div class="cover-guide" id="coverGuide" role="dialog" aria-label="Brochure instructions">
+              <button type="button" id="guideClose" class="guide-close" aria-label="Close instructions">×</button>
+              <div class="guide-title">How to explore · ಬ್ರೋಷರ್ ಬಳಸುವುದು</div>
+              <p><b>Next / ಮುಂದೆ:</b> Tap or click the right side.</p>
+              <p><b>Back / ಹಿಂದೆ:</b> Tap or click the left side.</p>
+              <p><b>Keyboard:</b> → / Enter = next · ← = back</p>
+              <div class="guide-countdown">This guide hides automatically in 5 seconds.</div>
+            </div>
+          </div>
+          <div class="face back blank-face" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="load-state" id="loadState" role="status" aria-live="polite">
+      <div class="loader-ring" aria-hidden="true"></div>
+      <div class="load-title">Preparing the brochure</div>
+      <div class="load-message" id="loadMessage">Opening the PDF pages…</div>
+    </section>
+
+    <div class="desktop-footer" id="desktopFooter">
+      <span class="footer-brand">NATYAKSHA <span>2026</span></span>
+      <span class="footer-help">Click the page edges or use ← → to turn pages</span>
+      <span class="footer-credit">Developer @<a href="https://abhivocopedia.github.io" target="_blank"
+          rel="noopener noreferrer">abhivocopedia</a></span>
+    </div>
+
+    <div class="page-counter" id="pageCounter" aria-live="polite">Cover</div>
+    <div class="turn-hint" id="turnHint" aria-hidden="true">Tap to open</div>
+  </main>
+
+  <audio id="natyakshaBackgroundMusic" preload="auto" loop playsinline>
+    <source src="background-music.mp3" type="audio/mpeg">
+  </audio>
+  <noscript>This brochure needs JavaScript enabled to render the PDF pages.</noscript>
+</body>
+
+</html>
