@@ -84,7 +84,7 @@
       face.classList.add("developer-page");
       const card = document.createElement("div");
       card.className = "developer-card";
-      card.innerHTML = `<div class="developer-ornament" aria-hidden="true">❖ ✦ ❖</div><div class="developer-eyebrow">prerna-2026 · Digital Brochure</div><h2 class="developer-title">Thank you for exploring</h2><p class="developer-credit">Developer @<a href="${CREDIT_URL}" target="_blank" rel="noopener noreferrer">abhivocopedia</a></p>`;
+      card.innerHTML = `<div class="developer-ornament" aria-hidden="true">❖ ✦ ❖</div><h2 class="developer-title">Thank you for exploring</h2><p class="developer-credit">Developed by @<a href="${CREDIT_URL}" target="_blank" rel="noopener noreferrer">abhivocopedia</a></p>`;
       surface.appendChild(card);
     } else if (descriptor.type === "pdf") {
       const loading = document.createElement("div");
