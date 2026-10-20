@@ -10,7 +10,8 @@
   const guide = document.getElementById("coverGuide");
   const guideClose = document.getElementById("guideClose");
   const audio = document.getElementById("prerna-2026BackgroundMusic");
-  const PDF_URL = new URLSearchParams(window.location.search).get("pdf") || "brochure.pdf";
+  const requestedPdf = new URLSearchParams(window.location.search).get("pdf");
+  const PDF_URL = new URL(requestedPdf || "brochure.pdf", document.baseURI).href;
   const CREDIT_URL = "https://abhivocopedia.github.io";
   const FLIP_MS = 900;
   const MOBILE_QUERY = window.matchMedia("(max-width: 700px), (hover: none) and (pointer: coarse)");
