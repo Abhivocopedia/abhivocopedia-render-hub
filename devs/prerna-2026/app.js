@@ -9,7 +9,7 @@
   const turnHint = document.getElementById("turnHint");
   const guide = document.getElementById("coverGuide");
   const guideClose = document.getElementById("guideClose");
-  const audio = document.getElementById("natyakshaBackgroundMusic");
+  const audio = document.getElementById("prerna-2026BackgroundMusic");
   const PDF_URL = new URLSearchParams(window.location.search).get("pdf") || "brochure.pdf";
   const CREDIT_URL = "https://abhivocopedia.github.io";
   const FLIP_MS = 900;
@@ -68,7 +68,7 @@
       const img = document.createElement("img");
       img.className = "cover-image";
       img.src = "cover.jpg";
-      img.alt = "Natyaksha 2026 cover";
+      img.alt = "prerna-2026 2026 cover";
       img.draggable = false;
       face.appendChild(img);
       if (side === "front") {
@@ -83,7 +83,7 @@
       face.classList.add("developer-page");
       const card = document.createElement("div");
       card.className = "developer-card";
-      card.innerHTML = `<div class="developer-ornament" aria-hidden="true">❖ ✦ ❖</div><div class="developer-eyebrow">Natyaksha · Digital Brochure</div><h2 class="developer-title">Thank you for exploring</h2><p class="developer-credit">Developer @<a href="${CREDIT_URL}" target="_blank" rel="noopener noreferrer">abhivocopedia</a></p>`;
+      card.innerHTML = `<div class="developer-ornament" aria-hidden="true">❖ ✦ ❖</div><div class="developer-eyebrow">prerna-2026 · Digital Brochure</div><h2 class="developer-title">Thank you for exploring</h2><p class="developer-credit">Developer @<a href="${CREDIT_URL}" target="_blank" rel="noopener noreferrer">abhivocopedia</a></p>`;
       surface.appendChild(card);
     } else if (descriptor.type === "pdf") {
       const loading = document.createElement("div");
